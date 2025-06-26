@@ -1,6 +1,7 @@
 ### Recuperar todas las peliculas
 GET http://localhost:1234/movies
 
+### --------> Recperar peliculas por parametros (NO camelCase)
 ### Recuperar una pelicula por id
 GET http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
 
@@ -15,6 +16,11 @@ GET http://localhost:1234/movies?year=1999
 
 ### Recuperar una pelicula por director
 GET http://localhost:1234/movies?director=Christopher%20Nolan
+
+### --------> Recperar peliculas por parametros incorrectos
+### Recuperar una pelicula por genero incorrecto
+GET http://localhost:1234/movies?pepe=jaime
+
 
 ### Crear una pelicula
 POST http://localhost:1234/movies
@@ -70,3 +76,6 @@ Content-Type: application/json
 {
   "year": 1993
 }
+
+### Eliminar una pelicula
+DELETE http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
